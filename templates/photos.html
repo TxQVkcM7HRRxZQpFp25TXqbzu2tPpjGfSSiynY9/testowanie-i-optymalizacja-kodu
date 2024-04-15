@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Photos</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Thumbnail</th>
+        </tr>
+        {% for photo in photos %}
+            <tr>
+                <td>{{ photo['title'] }}</td>
+                <td><img src="{{ photo['thumbnailUrl'] }}" alt="{{ photo['title'] }}"></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
