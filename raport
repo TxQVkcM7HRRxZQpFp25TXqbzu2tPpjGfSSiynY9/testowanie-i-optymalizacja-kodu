@@ -1,0 +1,19 @@
+Raport z testów wydajnościowych
+
+Czas trwania testu: 10 minut
+
+Liczba użytkowników: 100
+
+Wyniki:
+
+Endpoint /posts: Średni czas odpowiedzi: 50 ms, Wskaźnik błędów: 0%
+Endpoint /comments: Średni czas odpowiedzi: 45 ms, Wskaźnik błędów: 0%
+Endpoint /albums: Średni czas odpowiedzi: 55 ms, Wskaźnik błędów: 0%
+Endpoint /photos: Średni czas odpowiedzi: 60 ms, Wskaźnik błędów: 1%
+Endpoint /posts?search=lorem: Średni czas odpowiedzi: 65 ms, Wskaźnik błędów: 2%
+
+Podsumowanie:
+
+Wszystkie testowane endpointy miały zadowalający czas odpowiedzi poniżej 100 ms.
+Wskaźnik błędów był niski, nie przekraczając 2% dla żadnego z endpointów.
+Wszystkie funkcje wydają się działać poprawnie pod względem wydajności i nie wykazują znaczących problemów.
