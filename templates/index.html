@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSONPlaceholder App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>JSONPlaceholder App</h1>
-    <ul>
-        <li><a href="{{ url_for('posts') }}">Posts</a></li>
-        <li><a href="{{ url_for('comments') }}">Comments</a></li>
-        <li><a href="{{ url_for('albums') }}">Albums</a></li>
-        <li><a href="{{ url_for('photos') }}">Photos</a></li>
-    </ul>
+    <header>
+        <h1>JSONPlaceholder App</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('posts') }}">Posts</a>
+        <a href="{{ url_for('comments') }}">Comments</a>
+        <a href="{{ url_for('albums') }}">Albums</a>
+        <a href="{{ url_for('photos') }}">Photos</a>
+    </nav>
+    <div class="container">
+        <p>Witamy w aplikacji JSONPlaceholder. Skorzystaj z nawigacji powyżej, aby przeglądać posty, komentarze, albumy i zdjęcia.</p>
+    </div>
 </body>
 </html>

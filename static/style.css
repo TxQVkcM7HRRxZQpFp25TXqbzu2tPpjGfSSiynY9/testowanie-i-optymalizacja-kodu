@@ -1,15 +1,122 @@
+/* Styl podstawowy dla całego ciała */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #007bff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cce5ff;
+}
+
+/* Styl dla kontenera */
+.container {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 /* Styl dla tabeli */
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
-    border: 1px solid #dddddd;
+    border: 1px solid #dee2e6;
     text-align: left;
-    padding: 8px;
+    padding: 12px;
+    font-size: 1em;
 }
 
 th {
+    background-color: #e9ecef;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/* Styl dla formularzy */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"], input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styl dla stopki */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
 }

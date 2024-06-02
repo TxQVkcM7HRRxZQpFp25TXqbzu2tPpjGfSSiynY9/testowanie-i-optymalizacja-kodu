@@ -7,18 +7,28 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Photos</h1>
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Thumbnail</th>
-        </tr>
-        {% for photo in photos %}
+    <header>
+        <h1>Photos</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('posts') }}">Posts</a>
+        <a href="{{ url_for('comments') }}">Comments</a>
+        <a href="{{ url_for('albums') }}">Albums</a>
+    </nav>
+    <div class="container">
+        <table>
             <tr>
-                <td>{{ photo['title'] }}</td>
-                <td><img src="{{ photo['thumbnailUrl'] }}" alt="{{ photo['title'] }}"></td>
+                <th>Title</th>
+                <th>Thumbnail</th>
             </tr>
-        {% endfor %}
-    </table>
+            {% for photo in photos %}
+                <tr>
+                    <td>{{ photo['title'] }}</td>
+                    <td><img src="{{ photo['thumbnailUrl'] }}" alt="{{ photo['title'] }}"></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>

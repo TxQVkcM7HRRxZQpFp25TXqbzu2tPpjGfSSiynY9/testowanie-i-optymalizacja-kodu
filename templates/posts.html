@@ -7,29 +7,35 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Posts</h1>
-
-    <!-- Formularz wyszukiwania -->
-    <form action="{{ url_for('posts') }}" method="get">
-        <label for="min_chars">Min. characters:</label>
-        <input type="number" id="min_chars" name="min_chars">
-        <label for="max_chars">Max. characters:</label>
-        <input type="number" id="max_chars" name="max_chars">
-        <button type="submit">Search</button>
-    </form>
-
-    <!-- Tabela z postami -->
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Body</th>
-        </tr>
-        {% for post in posts %}
+    <header>
+        <h1>Posts</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('comments') }}">Comments</a>
+        <a href="{{ url_for('albums') }}">Albums</a>
+        <a href="{{ url_for('photos') }}">Photos</a>
+    </nav>
+    <div class="container">
+        <form action="{{ url_for('posts') }}" method="get">
+            <label for="min_chars">Min. characters:</label>
+            <input type="number" id="min_chars" name="min_chars">
+            <label for="max_chars">Max. characters:</label>
+            <input type="number" id="max_chars" name="max_chars">
+            <button type="submit">Search</button>
+        </form>
+        <table>
             <tr>
-                <td>{{ post['title'] }}</td>
-                <td>{{ post['body'] }}</td>
+                <th>Title</th>
+                <th>Body</th>
             </tr>
-        {% endfor %}
-    </table>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post['title'] }}</td>
+                    <td>{{ post['body'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>
